@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import css from "./Navbar.module.css"
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
@@ -12,14 +13,15 @@ const Navbar = () => {
   `)
 
   return (
-    <nav className="navbar">
+    <nav className={css.navbar}>
       <Link to="/">
         <img
-          className="navbar-logo"
+          className={css.logo}
           src={data.file.publicURL}
           alt={data.file.name}
         />
       </Link>
+      <Link to="/">Blog</Link>
     </nav>
   )
 }

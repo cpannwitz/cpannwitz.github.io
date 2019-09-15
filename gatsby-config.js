@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: "pnwtz - Blog.",
-    author: "Christian Pannwitz",
+    author: "Chris Pannwitz",
     siteUrl: "https://pnwtz.me/",
+    email: "ch.von.pa@googlemail.com",
+    jobDescription:
+      "I do fullstack web development, web- & user experience design.",
     description: "Stories of frontend engineering.",
     keywords: ["Software Engineer", "Web Developer", "Fullstack", "React"],
     social: {
@@ -59,7 +62,7 @@ module.exports = {
         short_name: "pnwtz",
         start_url: "/",
         background_color: "#ffffff",
-        theme_color: "#263859",
+        theme_color: "#1f2a56",
         display: "standalone",
         icon: "content/assets/icon.png",
         theme_color_in_head: false,

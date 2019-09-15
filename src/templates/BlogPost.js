@@ -1,10 +1,8 @@
 import React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link, graphql } from "gatsby"
-
-// import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/Seo/Seo"
 import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {

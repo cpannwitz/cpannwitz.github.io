@@ -1,0 +1,24 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 550px) {
+  .navbar {
+    position: relative;
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 8rem;
+  margin: 0;
+}
