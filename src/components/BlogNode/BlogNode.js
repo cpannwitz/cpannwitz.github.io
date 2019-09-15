@@ -22,7 +22,9 @@ const BlogNode = ({ node }) => {
           <div className={css.hlist}>
             <small>{node.frontmatter.date}</small>
             {node.frontmatter.keywords.map(keyword => (
-              <small className={css.chip}>{keyword}</small>
+              <small key={keyword} className={css.chip}>
+                {keyword}
+              </small>
             ))}
           </div>
         </div>

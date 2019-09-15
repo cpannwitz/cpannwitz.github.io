@@ -21,7 +21,9 @@ const Navbar = () => {
           alt={data.file.name}
         />
       </Link>
-      <Link to="/">Blog</Link>
+      <Link to="/" activeClassName={css.activelink}>
+        Blog
+      </Link>
     </nav>
   )
 }
