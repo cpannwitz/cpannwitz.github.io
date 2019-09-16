@@ -5,10 +5,27 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/Seo/Seo"
 import { rhythm, scale } from "../utils/typography"
 
+import "gitalk/dist/gitalk.css"
+import gitalkConfig from "../utils/gitalk-config"
+
+// Prevent webpack window problem
+const isBrowser = typeof window !== "undefined"
+const Gitalk = isBrowser ? require("gitalk") : undefined
+
 class BlogPostTemplate extends React.Component {
+  componentDidMount() {
+    const { title, slug } = this.props.data.mdx.frontmatter
+    const GitTalkInstance = new Gitalk({
+      ...gitalkConfig,
+      title: title,
+      id: slug,
+    })
+    GitTalkInstance.render("gitalk-container")
+  }
+
   render() {
-    const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const { mdx: post, site } = this.props.data
+    const siteTitle = site.siteMetadata.title
     // const { previous, next } = this.props.pageContext
 
     return (
@@ -47,6 +64,8 @@ class BlogPostTemplate extends React.Component {
           {/* <footer>
           </footer> */}
         </article>
+
+        <div id="gitalk-container" />
 
         {/* <nav>
           <ul

@@ -60,6 +60,10 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
+p {
+  letter-spacing: 0.2px;
+}
+
 a {
   color: var(--main-linkcolor);
   transition: all ease 0.25s;
