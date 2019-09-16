@@ -1,11 +1,17 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import css from "./Navbar.module.css"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import { Sun, Moon } from "react-feather"
 
 const Navbar = () => {
-  const data = useStaticQuery(graphql`
+  const logo = useStaticQuery(graphql`
     {
-      file(extension: { eq: "svg" }, name: { eq: "logo-pnwtz-white" }) {
+      light: file(extension: { eq: "svg" }, name: { eq: "logo-pnwtz-white" }) {
+        publicURL
+        name
+      }
+      dark: file(extension: { eq: "svg" }, name: { eq: "logo-pnwtz-blue" }) {
         publicURL
         name
       }
@@ -14,16 +20,47 @@ const Navbar = () => {
 
   return (
     <nav className={css.navbar}>
-      <Link to="/">
-        <img
-          className={css.logo}
-          src={data.file.publicURL}
-          alt={data.file.name}
-        />
-      </Link>
-      <Link to="/" activeClassName={css.activelink}>
-        Blog
-      </Link>
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <>
+            <Link to="/">
+              {theme === "dark" ? (
+                <img
+                  className={css.logo}
+                  src={logo.dark.publicURL}
+                  alt={logo.dark.name}
+                />
+              ) : (
+                <img
+                  className={css.logo}
+                  src={logo.light.publicURL}
+                  alt={logo.light.name}
+                />
+              )}
+            </Link>
+            <div className={css.navbarright}>
+              <Link
+                to="/"
+                partiallyActive={true}
+                activeClassName={css.activelink}
+              >
+                Blog
+              </Link>
+
+              <input
+                id="toggle"
+                hidden
+                type="checkbox"
+                onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+                checked={theme === "dark"}
+              />
+              <label for="toggle" className={css.toggle}>
+                {theme === "dark" ? <Moon></Moon> : <Sun></Sun>}
+              </label>
+            </div>
+          </>
+        )}
+      </ThemeToggler>
     </nav>
   )
 }

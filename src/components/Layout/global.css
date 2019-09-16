@@ -1,17 +1,22 @@
-:root {
-  --main-color: #efefff;
+body {
+  --main-color: #fefeff;
   --main-bgcolor: #1f2a56;
-  --main-subtle: #9999bb;
+  --main-subtle: #777799;
   --main-dark: #111525;
   --main-linkcolor: #cc4733;
   --mq-small: 550px;
-}
 
-body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-bgcolor);
   color: var(--main-color);
+}
+
+body.dark {
+  --main-bgcolor: #efefff;
+  --main-color: #1f2a56;
+  --main-dark: #111525;
+  --main-linkcolor: #cc4733;
 }
 
 *:focus {

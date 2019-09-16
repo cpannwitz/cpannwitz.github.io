@@ -18,6 +18,15 @@
   }
 }
 
+.navbarright {
+  display: flex;
+  align-items: center;
+}
+
+.navbarright > * {
+  margin-left: 1.5rem;
+}
+
 .logo {
   height: 100%;
   width: 6rem;
@@ -37,4 +46,14 @@
   left: 0;
   background-color: var(--main-linkcolor);
   visibility: visible;
+}
+
+.toggle {
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.toggle:hover {
+  transform: rotate(70deg);
 }

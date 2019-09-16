@@ -78,6 +78,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-    "gatsby-plugin-catch-links",
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-dark-mode`,
   ],
 }
