@@ -3,6 +3,7 @@ import "./prismtheme-dark.css"
 import "./global.css"
 import Navbar from "../Navbar/Navbar"
 import Bio from "../Bio/Bio"
+import { version } from "../../../package.json"
 
 const Layout = props => {
   const { children } = props
@@ -26,7 +27,9 @@ const Layout = props => {
       <footer>
         <Bio></Bio>
         <br />
-        <small>© {new Date().getFullYear()} built with React</small>
+        <small>
+          © {new Date().getFullYear()} built with React - {version}
+        </small>
       </footer>
     </div>
   )
