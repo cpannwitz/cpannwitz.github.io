@@ -4,8 +4,7 @@ module.exports = {
     author: "Chris Pannwitz",
     siteUrl: "https://pnwtz.me/",
     email: "ch.von.pa@googlemail.com",
-    jobDescription:
-      "I do fullstack web development, web- & user experience design.",
+    jobDescription: "Fullstack web developer, UI & UX designer.",
     description: "Stories of frontend engineering.",
     keywords: ["Software Engineer", "Web Developer", "Fullstack", "React"],
     social: {
@@ -39,6 +38,7 @@ module.exports = {
             options: {
               maxWidth: 1024,
               sizeByPixelDensity: true,
+              linkImagesToOriginal: false,
             },
           },
           {
@@ -50,6 +50,7 @@ module.exports = {
             },
           },
         ],
+        plugins: [`gatsby-remark-images`], // <~~*~*~*~* THIS
       },
     },
     `gatsby-transformer-sharp`,

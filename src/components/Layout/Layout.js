@@ -28,7 +28,7 @@ const Layout = props => {
         <Bio></Bio>
         <br />
         <small>
-          © {new Date().getFullYear()} built with React - {version} - Lisa is
+          © {new Date().getFullYear()} built with Gatsby - {version} - Lisa is
           cool (:
         </small>
       </footer>
