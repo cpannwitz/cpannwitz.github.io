@@ -1,8 +1,6 @@
-// const { GATSBY_GITHUB_ID, GATSBY_GITHUB_SECRET } = process.env
-
 const gitalkConfig = {
-  clientID: "d9d1cafee1d959d73a6a",
-  clientSecret: "e4772b51ad53cd08faa7dd9632e65cc93a4bda04",
+  clientID: process.env.GITHUB_ID,
+  clientSecret: process.env.GITHUB_SECRET,
   repo: "cpannwitz.github.io",
   owner: "cpannwitz",
   admin: ["cpannwitz"],
