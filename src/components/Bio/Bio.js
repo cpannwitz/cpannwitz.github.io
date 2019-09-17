@@ -15,7 +15,7 @@ const Bio = () => {
           author
           email
           jobDescription
-          social {
+          socialURLs {
             github
             twitter
             linkedin
@@ -25,7 +25,7 @@ const Bio = () => {
     }
   `)
 
-  const { email, author, jobDescription, social } = data.site.siteMetadata
+  const { email, author, jobDescription, socialURLs } = data.site.siteMetadata
 
   return (
     <div className={css.bio}>
@@ -39,13 +39,21 @@ const Bio = () => {
           <a href={`mailto:${email}`}>
             <Mail strokeWidth={1} size={22}></Mail>
           </a>
-          <a href={social.github} target="_blank" rel="noopener noreferrer">
+          <a href={socialURLs.github} target="_blank" rel="noopener noreferrer">
             <GitHub strokeWidth={1} size={22}></GitHub>
           </a>
-          <a href={social.twitter} target="_blank" rel="noopener noreferrer">
+          <a
+            href={socialURLs.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Twitter strokeWidth={1} size={22}></Twitter>
           </a>
-          <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
+          <a
+            href={socialURLs.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Linkedin strokeWidth={1} size={22}></Linkedin>
           </a>
         </div>

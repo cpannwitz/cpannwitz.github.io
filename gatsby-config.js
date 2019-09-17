@@ -1,13 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: "pnwtz - Blog.",
+    description: "Stories of frontend engineering.",
     author: "Chris Pannwitz",
+    image: "content/assets/icon.png",
     siteUrl: "http://pnwtz.me/",
     email: "ch.von.pa@googlemail.com",
     jobDescription: "Fullstack web developer, UI & UX designer.",
-    description: "Stories of frontend engineering.",
-    keywords: ["Software Engineer", "Web Developer", "Fullstack", "React"],
+    keywords: ["Webdesign", "UX Design", "Web Developer", "Fullstack", "React"],
     social: {
+      twitter: "@unrealchrisp",
+    },
+    socialURLs: {
       twitter: "https://twitter.com/unrealchrisp",
       github: "https://github.com/cpannwitz",
       linkedin: "https://www.linkedin.com/in/christianpannwitz/",

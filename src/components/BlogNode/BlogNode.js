@@ -6,7 +6,7 @@ import Img from "gatsby-image/withIEPolyfill"
 const BlogNode = ({ node }) => {
   const postTitle = node.frontmatter.title || node.frontmatter.slug
   return (
-    <article className="blog-post">
+    <article className={css.blogNode}>
       <header className={css.header}>
         <Img
           className={css.thumbnail}

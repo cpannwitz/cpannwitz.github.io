@@ -54,7 +54,7 @@ const Navbar = () => {
                 onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
                 checked={theme === "dark"}
               />
-              <label for="toggle" className={css.toggle}>
+              <label htmlFor="toggle" className={css.toggle}>
                 {theme === "light" ? <Moon></Moon> : <Sun></Sun>}
               </label>
             </div>
