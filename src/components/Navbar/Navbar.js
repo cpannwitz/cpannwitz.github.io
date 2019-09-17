@@ -58,7 +58,6 @@ const Navbar = () => {
                 {theme === "light" ? <Moon></Moon> : <Sun></Sun>}
               </label>
             </div>
-            {console.log("LOG | : theme", theme)}
           </>
         )}
       </ThemeToggler>

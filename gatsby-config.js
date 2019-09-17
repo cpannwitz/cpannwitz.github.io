@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "pnwtz - Blog.",
     author: "Chris Pannwitz",
-    siteUrl: "https://pnwtz.me/",
+    siteUrl: "http://pnwtz.me/",
     email: "ch.von.pa@googlemail.com",
     jobDescription: "Fullstack web developer, UI & UX designer.",
     description: "Stories of frontend engineering.",
@@ -69,7 +69,7 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -77,8 +77,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 }
