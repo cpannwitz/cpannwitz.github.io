@@ -1,9 +1,11 @@
 body {
-  --main-color: #fefeff;
-  --main-bgcolor: #1f2a56;
-  --main-subtle: #777799;
+  --main-bgcolor: #fafaff;
+  --main-color: #1f2a56;
+  --main-subtle: #555577;
   --main-dark: #111525;
   --main-linkcolor: #cc4733;
+  --main-opaque: rgba(0, 0, 0, 0.08);
+
   --mq-small: 550px;
 
   -webkit-font-smoothing: antialiased;
@@ -13,10 +15,12 @@ body {
 }
 
 body.dark {
-  --main-bgcolor: #efefff;
-  --main-color: #1f2a56;
+  --main-color: #efefff;
+  --main-bgcolor: #1f2a56;
+  --main-subtle: #bbbbee;
   --main-dark: #111525;
   --main-linkcolor: #cc4733;
+  --main-opaque: rgba(0, 0, 0, 0.2);
 }
 
 *:focus {

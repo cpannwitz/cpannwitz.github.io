@@ -27,14 +27,14 @@ const Navbar = () => {
               {theme === "dark" ? (
                 <img
                   className={css.logo}
-                  src={logo.dark.publicURL}
-                  alt={logo.dark.name}
+                  src={logo.light.publicURL}
+                  alt={logo.light.name}
                 />
               ) : (
                 <img
                   className={css.logo}
-                  src={logo.light.publicURL}
-                  alt={logo.light.name}
+                  src={logo.dark.publicURL}
+                  alt={logo.dark.name}
                 />
               )}
             </Link>
@@ -55,9 +55,10 @@ const Navbar = () => {
                 checked={theme === "dark"}
               />
               <label for="toggle" className={css.toggle}>
-                {theme === "dark" ? <Moon></Moon> : <Sun></Sun>}
+                {theme === "light" ? <Moon></Moon> : <Sun></Sun>}
               </label>
             </div>
+            {console.log("LOG | : theme", theme)}
           </>
         )}
       </ThemeToggler>

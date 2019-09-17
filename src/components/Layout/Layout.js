@@ -8,18 +8,6 @@ import { version } from "../../../package.json"
 const Layout = props => {
   const { children } = props
 
-  // let root = document.documentElement
-  // function toggleColor() {
-  //   setColorstate(!colorstate)
-  //   if (colorstate) {
-  //     root.style.setProperty("--main-color", "#efefff")
-  //     root.style.setProperty("--main-bgcolor", "#272f4e")
-  //   } else {
-  //     root.style.setProperty("--main-color", "#272f4e")
-  //     root.style.setProperty("--main-bgcolor", "#efefff")
-  //   }
-  // }
-
   return (
     <div>
       <Navbar></Navbar>

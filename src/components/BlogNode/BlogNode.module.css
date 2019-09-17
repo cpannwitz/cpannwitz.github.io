@@ -18,7 +18,7 @@
 .chip {
   color: var(--main-subtle);
   border-radius: 10%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--main-opaque);
   margin: 0 0.25rem;
-  padding: 0 0.25rem;
+  padding: 0 0.3rem;
 }
