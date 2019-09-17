@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--main-dark) 0px 2px 5px 0px;
+  box-shadow: var(--main-dark) 0px 1px 3px 0px;
   flex-shrink: 0;
 }
 
