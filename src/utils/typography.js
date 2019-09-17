@@ -1,8 +1,8 @@
 import Typography from "typography"
 import typographyTheme from "typography-theme-alton"
 
-typographyTheme.scaleRatio = 2.5
-typographyTheme.baseLineHeight = 1.6
+typographyTheme.scaleRatio = 2.7
+typographyTheme.baseLineHeight = 1.5
 typographyTheme.blockMarginBottom = 0.8
 typographyTheme.headerWeight = "normal"
 typographyTheme.headerFontFamily = ["Assistant", "sans-serif"]

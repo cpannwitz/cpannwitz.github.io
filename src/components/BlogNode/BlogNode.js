@@ -14,11 +14,11 @@ const BlogNode = ({ node }) => {
           alt="blog thumbnail"
         ></Img>
         <div>
-          <h3>
+          <h2>
             <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
               {postTitle}
             </Link>
-          </h3>
+          </h2>
           <div className={css.hlist}>
             <small>{node.frontmatter.date}</small>
             {node.frontmatter.keywords.map(keyword => (
