@@ -14,7 +14,7 @@ const BlogNode = ({ node }) => {
           alt="blog thumbnail"
         ></Img>
         <div>
-          <h2>
+          <h2 className={css.title} >
             <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
               {postTitle}
             </Link>

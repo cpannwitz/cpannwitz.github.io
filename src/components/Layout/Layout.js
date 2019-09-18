@@ -15,7 +15,7 @@ const Layout = props => {
       <footer>
         <Bio></Bio>
         <br />
-        <small>
+        <small className="copy">
           © {new Date().getFullYear()} built with Gatsby - {version} - Lisa is
           cool (:
         </small>

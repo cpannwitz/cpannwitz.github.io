@@ -33,7 +33,7 @@ const Bio = () => {
         <img src={data.file.publicURL} alt={data.file.name} />
       </div>
       <div className={css.text}>
-        <h3>{author}</h3>
+        <h3 className={css.title}>{author}</h3>
         <small>{jobDescription}</small>
         <div className={css.iconrow}>
           <a href={`mailto:${email}`}>
