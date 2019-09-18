@@ -5637,20 +5637,6 @@ gatsby-react-router-scroll@^2.1.6:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@^2.1.7:
-  version "2.1.13"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.13.tgz#29c8d9500ba78a9d457f102540396c39abbd783e"
-  integrity sha512-cDsDNs7GrTd1Zzg5kCjpxezm4kjpYWgK03XvPPhZ+OXsHJVysxXKXhgeCnQthty4FEBdQ3UkJnyX4VZmSqMm5w==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    cheerio "^1.0.0-rc.3"
-    fs-extra "^8.1.0"
-    is-relative-url "^3.0.0"
-    lodash "^4.17.15"
-    path-is-inside "^1.0.2"
-    probe-image-size "^4.1.1"
-    unist-util-visit "^1.4.1"
-
 gatsby-remark-images@^3.1.13:
   version "3.1.19"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.19.tgz#1ad1493cb9dbd7b1917895d73fd2ddd30edb98af"
@@ -6622,11 +6608,6 @@ homedir-polyfill@^1.0.1:
   integrity sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
   dependencies:
     parse-passwd "^1.0.0"
-
-horizon-prismjs-theme@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/horizon-prismjs-theme/-/horizon-prismjs-theme-1.0.4.tgz#0cfdfdfa2b6afb9645b012fddcd5f00d613e2f81"
-  integrity sha512-4hyU+Ekc9OxXearjpJ7XBBoEVqjo6ltxl0WE1wzfe68zPfiWPKu5lI/XwCysXG5Qra0vHZ/xrIRfxMX9hIUmYw==
 
 hosted-git-info@^2.1.4:
   version "2.8.4"
