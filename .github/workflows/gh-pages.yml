@@ -13,22 +13,21 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: install
-        run: npm install
+        run: npm ci
 
       - name: build
         run: npm run build
-        # env:
-        #   GITHUB_ID: ${{ secrets.GITHUB_ID }}
-        #   GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: ./public
