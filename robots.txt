@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://pnwtz.me/sitemap.xml
+Host: pnwtz.me
