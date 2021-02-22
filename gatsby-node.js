@@ -1,116 +1,147 @@
-const path = require(`path`)
+'use strict'
 
-exports.createPages = ({ actions, graphql }) =>
-  graphql(`
-    query {
-      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
-        edges {
-          node {
-            id
-            excerpt(pruneLength: 250)
-            fields {
-              title
-              slug
-              categories
-            }
-            body
+const path = require(`path`)
+const config = require('./config.js')
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+  const postTemplate = path.resolve(`./src/templates/post-template.tsx`)
+  const projectTemplate = path.resolve(`./src/templates/project-template.tsx`)
+
+  // fetch blog post and project data, to create pages
+  const data = await graphql(`
+    {
+      blog: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "${config.content.blogPostsPath}" }, frontmatter: {draft: {ne: true}} }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            slug
+            title
+          }
+        }
+      }
+      projects: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "${config.content.projectsPath}" }, frontmatter: {draft: {ne: true}} }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            slug
+            title
           }
         }
       }
     }
-  `).then(({ data, errors }) => {
-    if (errors) {
-      return Promise.reject(errors)
-    }
+  `)
 
-    const posts = data.allMdx.edges
+  if (data.errors) {
+    reporter.panicOnBuild(`There was an error loading blog posts / projects!`, result.errors)
+    return
+  }
 
-    posts.forEach((post, index) => {
-      // TODO: support next and previous posts
-      // const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      // const next = index === 0 ? null : posts[index - 1].node
-      actions.createPage({
-        path: post.node.fields.slug,
-        component: path.resolve(`./src/templates/BlogPost.js`),
-        context: {
-          id: post.node.id,
-          slug: post.node.fields.slug,
-          // previous,
-          // next,
-        },
-      })
+  // * render all project pages
+  const allProjects = data.data.projects.nodes
+
+  if (!allProjects || allProjects.length <= 0) {
+    reporter.panicOnBuild(`There are no projects!`)
+    return
+  }
+
+  allProjects.forEach(project => {
+    createPage({
+      path: '/projects' + project.frontmatter.slug,
+      component: projectTemplate,
+      context: {
+        id: project.id,
+        slug: project.frontmatter.slug,
+        imgMaxWidth: config.maxWidth,
+        imgQuality: config.content.imgQuality,
+        dateFormat: config.content.dateFormat
+      }
     })
   })
 
-// * =============================================================================================
-// * ================================= WEBPACK =============================================
-// * =============================================================================================
+  // * render all blog post pages
+  const allPosts = data.data.blog.nodes
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
-      alias: {
-        $components: path.resolve(__dirname, "src/components"),
-      },
-    },
+  if (!allPosts || allPosts.length <= 0) {
+    reporter.panicOnBuild(`There are no blog posts!`)
+    return
+  }
+
+  allPosts.forEach((post, index) => {
+    const nextPost = index === 0 ? null : allPosts[index - 1]
+    const prevPost = index === allPosts.length - 1 ? null : allPosts[index + 1]
+    createPage({
+      path: '/blog' + post.frontmatter.slug,
+      component: postTemplate,
+      context: {
+        id: post.id,
+        slug: post.frontmatter.slug,
+        prevPost,
+        nextPost,
+        imgMaxWidth: config.maxWidth,
+        imgQuality: config.content.imgQuality,
+        dateFormat: config.content.dateFormat
+      }
+    })
   })
 }
 
-// * =============================================================================================
-// * ================================= NODE =============================================
-// * =============================================================================================
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  deletePage(page)
+  createPage({
+    ...page,
+    context: {
+      ...page.context,
+      filterBlog: {
+        'fileAbsolutePath': { 'regex': config.content.blogPostsPath },
+        'frontmatter': { 'draft': { 'ne': true } }
+      },
+      filterProjects: {
+        'fileAbsolutePath': { 'regex': config.content.projectsPath },
+        'frontmatter': { 'draft': { 'ne': true } }
+      },
+      sort: config.content.sort,
+      imgMaxWidth: config.maxWidth,
+      imgQuality: config.content.imgQuality,
+      dateFormat: config.content.dateFormat
+    }
+  })
+}
 
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `Mdx`) {
-    createNodeField({
-      name: "id",
-      node,
-      value: node.id,
-    })
-
-    createNodeField({
-      name: "title",
-      node,
-      value: node.frontmatter.title,
-    })
-
-    createNodeField({
-      name: "description",
-      node,
-      value: node.frontmatter.description,
-    })
-
-    createNodeField({
-      name: "slug",
-      node,
-      value: node.frontmatter.slug,
-    })
-
-    createNodeField({
-      name: "date",
-      node,
-      value: node.frontmatter.date || "",
-    })
-
-    createNodeField({
-      name: "banner",
-      node,
-      banner: node.frontmatter.banner,
-    })
-
-    createNodeField({
-      name: "categories",
-      node,
-      value: node.frontmatter.categories || [],
-    })
-
-    createNodeField({
-      name: "keywords",
-      node,
-      value: node.frontmatter.keywords || [],
-    })
+exports.onCreateNode = ({ node }) => {
+  // * create blog post / project fallback data
+  // the node should be located in 'content/blog/' to be considered
+  // const isBlogPost = new RegExp(/content\/blog\//).test(node.fileAbsolutePath)
+  const isBlogPost = new RegExp(config.blogPostsPath).test(node.fileAbsolutePath)
+  // the node should be located in 'content/projects/' to be considered
+  // const isProject = new RegExp(/content\/projects\//).test(node.fileAbsolutePath)
+  const isProject = new RegExp(config.projectsPath).test(node.fileAbsolutePath)
+  if (node.internal.type === 'MarkdownRemark' && (isBlogPost || isProject)) {
+    // if there's no date, set it to now
+    if (!node.frontmatter.date) {
+      node.frontmatter.date = new Date().toISOString()
+    }
+    // if there's no description, set it to empty
+    if (!node.frontmatter.description) {
+      node.frontmatter.description = ''
+    }
+    // if there's no thumbnail, use the 404 logo
+    if (!node.frontmatter.thumbnail) {
+      node.frontmatter.thumbnail = '../../assets/logo-404.svg'
+    }
+    // if there are no keywords or a category, set them to empty
+    if (!node.frontmatter.keywords) {
+      node.frontmatter.keywords = []
+    }
+    if (!node.frontmatter.category) {
+      node.frontmatter.category = ''
+    }
   }
 }

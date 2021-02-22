@@ -1,6 +1,9 @@
 # Custom
 misc
 
+# Test Content
+content/blog/00-markdown-testpage
+
 # Logs
 logs
 *.log
