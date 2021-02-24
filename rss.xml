@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[pnwtz - RSS Feed]]></title><description><![CDATA[Stories of Project Management & Web Development.]]></description><link>https://pnwtz.me</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Feb 2021 10:21:38 GMT</lastBuildDate><item><title><![CDATA[Introduction to GatsbyJS]]></title><description><![CDATA[Start building your own blog with GatsbyJS]]></description><link>https://pnwtz.me/introduction-to-gatsby</link><guid isPermaLink="false">https://pnwtz.me/introduction-to-gatsby</guid><pubDate>Fri, 19 Feb 2021 10:51:14 GMT</pubDate><content:encoded>&lt;h2 id=&quot;Parts&quot; style=&quot;position:relative;&quot;&gt;Parts&lt;a href=&quot;#Parts&quot; aria-label=&quot;Parts permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;mandatory files &amp;#x26; folders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; -&gt; configuration of project &amp;#x26; its dependencies&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; -&gt; configuration of Gatsby and its plugins&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-node.js&lt;/code&gt; -&gt; configuration of page creation process&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;src/pages/index.[js|tsx]&lt;/code&gt; -&gt; automatic creation of index pages via file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;typical files &amp;#x26; folders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-browser.js&lt;/code&gt; -&gt; configuration of browser specifics, e.g. CSS-file imports&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-ssr.js&lt;/code&gt; -&gt; configuration of server side rendering specifics&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;src/layouts/*.[js|tsx]&lt;/code&gt; -&gt; use layout components for different page types&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;src/templates/*.[js|tsx]&lt;/code&gt; -&gt; use template components for different layout types&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;src/components/*.[js|tsx]&lt;/code&gt; -&gt; all components you need to create your layout and functionality&lt;/li&gt;
+&lt;/ul&gt;
+                  &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(You can read this article on my blog &lt;a href=&quot;https://pnwtz.me/introduction-to-gatsby&quot;&gt;pnwtz.me&lt;/a&gt;.)&lt;/div&gt;
+                </content:encoded></item><item><title><![CDATA[Markdown Testpage]]></title><description><![CDATA[This is a testpage for markdown syntax, which contains several elements to help debugging.]]></description><link>https://pnwtz.me/markdown-testpage</link><guid isPermaLink="false">https://pnwtz.me/markdown-testpage</guid><pubDate>Thu, 18 Feb 2021 10:51:14 GMT</pubDate><content:encoded>&lt;p&gt;asd&lt;/p&gt;
+&lt;h2 id=&quot;H2&quot; style=&quot;position:relative;&quot;&gt;H2&lt;a href=&quot;#H2&quot; aria-label=&quot;H2 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;asd&lt;/p&gt;
+&lt;h3 id=&quot;H3&quot; style=&quot;position:relative;&quot;&gt;H3&lt;a href=&quot;#H3&quot; aria-label=&quot;H3 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;asd&lt;/p&gt;
+&lt;h4 id=&quot;H4&quot; style=&quot;position:relative;&quot;&gt;H4&lt;a href=&quot;#H4&quot; aria-label=&quot;H4 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;asd&lt;/p&gt;
+&lt;h5 id=&quot;H5&quot; style=&quot;position:relative;&quot;&gt;H5&lt;a href=&quot;#H5&quot; aria-label=&quot;H5 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;asd&lt;/p&gt;
+&lt;h6 id=&quot;H6&quot; style=&quot;position:relative;&quot;&gt;H6&lt;a href=&quot;#H6&quot; aria-label=&quot;H6 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h6&gt;
+&lt;p&gt;asd
+Alternatively, for H1 and H2, an underline-ish style:&lt;/p&gt;
+&lt;p&gt;asd&lt;/p&gt;
+&lt;h2 id=&quot;Alt-H2&quot; style=&quot;position:relative;&quot;&gt;Alt-H2&lt;a href=&quot;#Alt-H2&quot; aria-label=&quot;Alt H2 permalink&quot; class=&quot;autolink-headers after&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;20&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;20&quot; style=&quot;margin: 0 0 -0.2rem 0.7rem; &quot;&gt;&lt;path fill=&quot;white&quot; fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;asd
+Emphasis, aka italics, with &lt;em&gt;asterisks&lt;/em&gt; or &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Strong emphasis, aka bold, with &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Combined emphasis with &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Strikethrough uses two tildes. &lt;del&gt;Scratch this.&lt;/del&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First ordered list item&lt;/li&gt;
+&lt;li&gt;Another item
+⋅⋅* Unordered sub-list.&lt;/li&gt;
+&lt;li&gt;Actual numbers don&apos;t matter, just that it&apos;s a number
+⋅⋅1. Ordered sub-list&lt;/li&gt;
+&lt;li&gt;And another item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&apos;ll use three here to also align the raw Markdown).&lt;/p&gt;
+&lt;p&gt;⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+&lt;li&gt;Or minuses&lt;/li&gt;
+&lt;li&gt;Or pluses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;I&apos;m an inline-style link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot; title=&quot;Google&amp;#x27;s Homepage&quot;&gt;I&apos;m an inline-style link with title&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org&quot;&gt;I&apos;m a reference-style link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../blob/master/LICENSE&quot;&gt;I&apos;m a relative reference to a repository file&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://slashdot.org&quot;&gt;You can use numbers for reference-style link definitions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or leave it empty and use the &lt;a href=&quot;http://www.reddit.com&quot;&gt;link text itself&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;URLs and URLs in angle brackets will automatically get turned into links.
+&lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt; or &lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt; and sometimes
+example.com (but not on Github, for example).&lt;/p&gt;
+&lt;p&gt;Some text to show that the reference links can follow later.&lt;/p&gt;
+&lt;p&gt;Here&apos;s our logo (hover to see the title text):&lt;/p&gt;
+&lt;p&gt;Inline-style:
+&lt;img src=&quot;https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Reference-style:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 760px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.84210526315789%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABz2LazXIB/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECERIh/9oACAEBAAEFApRqNEsyU+//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAXEAADAQAAAAAAAAAAAAAAAAAAASEQ/9oACAEBAAE/IYjgoSG2D//aAAwDAQACAAMAAAAQx+//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAFxABAQEBAAAAAAAAAAAAAAAAAQARQf/aAAgBAQABPxA0YWWsj5kyyjJBhf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;Logo Title Text 2&quot;
+        src=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg&quot;
+        srcset=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/82f15/testimage.jpg 190w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0246a/testimage.jpg 380w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg 760w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0470c/testimage.jpg 1140w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/6ed34/testimage.jpg 1520w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/01150/testimage.jpg 6240w&quot;
+        sizes=&quot;(max-width: 760px) 100vw, 760px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;INTERN IMAGE LINKS
+Inline-style:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 760px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.84210526315789%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABz2LazXIB/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECERIh/9oACAEBAAEFApRqNEsyU+//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAXEAADAQAAAAAAAAAAAAAAAAAAASEQ/9oACAEBAAE/IYjgoSG2D//aAAwDAQACAAMAAAAQx+//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAFxABAQEBAAAAAAAAAAAAAAAAAQARQf/aAAgBAQABPxA0YWWsj5kyyjJBhf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;Logo Title Text 1&quot;
+        src=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg&quot;
+        srcset=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/82f15/testimage.jpg 190w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0246a/testimage.jpg 380w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg 760w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0470c/testimage.jpg 1140w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/6ed34/testimage.jpg 1520w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/01150/testimage.jpg 6240w&quot;
+        sizes=&quot;(max-width: 760px) 100vw, 760px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Reference-style:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 760px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.84210526315789%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABz2LazXIB/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECERIh/9oACAEBAAEFApRqNEsyU+//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAXEAADAQAAAAAAAAAAAAAAAAAAASEQ/9oACAEBAAE/IYjgoSG2D//aAAwDAQACAAMAAAAQx+//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBn/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAFxABAQEBAAAAAAAAAAAAAAAAAQARQf/aAAgBAQABPxA0YWWsj5kyyjJBhf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;Logo Title Text 2&quot;
+        src=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg&quot;
+        srcset=&quot;https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/82f15/testimage.jpg 190w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0246a/testimage.jpg 380w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/307d7/testimage.jpg 760w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/0470c/testimage.jpg 1140w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/6ed34/testimage.jpg 1520w,https://pnwtz.me/static/d05263ebd1bc07f6ced875f7d8ef918f/01150/testimage.jpg 6240w&quot;
+        sizes=&quot;(max-width: 760px) 100vw, 760px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;JavaScript syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt; s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;No language indicated, so no syntax highlighting.
+But let&amp;#39;s throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Colons can be used to align columns.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Are&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;right-aligned&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;centered&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;are neat&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&apos;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Markdown&lt;/th&gt;
+&lt;th&gt;Less&lt;/th&gt;
+&lt;th&gt;Pretty&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;renders&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Quote break.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a very long line that will still be quoted properly when it wraps. Oh boy let&apos;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;em&gt;put&lt;/em&gt; &lt;strong&gt;Markdown&lt;/strong&gt; into a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Three or more...&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Hyphens&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Asterisks&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Underscores&lt;/p&gt;
+&lt;ul&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; this is a complete item&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; this is an incomplete item&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; @mentions, #refs, &lt;a href=&quot;&quot;&gt;links&lt;/a&gt;,
+&lt;strong&gt;formatting&lt;/strong&gt;, and &lt;del&gt;tags&lt;/del&gt;
+supported&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; list syntax required (any
+unordered or ordered list
+supported)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GitHub supports emoji!
+:+1: :sparkles: :camel: :tada:
+:rocket: :metal: :octocat:&lt;/p&gt;
+                  &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(You can read this article on my blog &lt;a href=&quot;https://pnwtz.me/markdown-testpage&quot;&gt;pnwtz.me&lt;/a&gt;.)&lt;/div&gt;
+                </content:encoded></item></channel></rss>
