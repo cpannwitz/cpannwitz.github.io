@@ -4,9 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+// add base CSS (water.css)
 import 'water.css/out/water.min.css'
+// add CSS for markdown syntax highlighting via PrismJS
 import 'prism-themes/themes/prism-nord.css'
 
+// wrap the page element with DefaultLayout
+// to prevent remounting navbar etc.
 import React from 'react'
 import DefaultLayout from './src/layouts/default-layout'
 

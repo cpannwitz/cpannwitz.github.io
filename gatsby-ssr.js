@@ -1,6 +1,8 @@
 import React from 'react'
 import DefaultLayout from './src/layouts/default-layout'
 
+// provide a custom script for persisting and altering the preferred-color-mode setting
+// this will get loaded in "onRenderBody", to inject the script in window-only environments
 // ! see 'src/components/Theme/ThemeProvider.tsx' for usage details on the theme
 const ThemeScript = () => {
   const calledFnc = `
@@ -38,7 +40,8 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents(<ThemeScript key='themeScript' />)
 }
 
-/*  eslint-disable */
+// wrap the page element with DefaultLayout
+// to prevent remounting navbar etc.
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
